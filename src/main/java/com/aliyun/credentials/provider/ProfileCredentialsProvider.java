@@ -7,14 +7,11 @@ import com.aliyun.credentials.exception.CredentialException;
 import com.aliyun.credentials.utils.AuthConstant;
 import com.aliyun.credentials.utils.AuthUtils;
 import com.aliyun.credentials.utils.StringUtils;
-import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Profile;
 import org.ini4j.Wini;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 

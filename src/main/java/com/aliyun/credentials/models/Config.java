@@ -4,8 +4,6 @@ import com.aliyun.credentials.exception.CredentialException;
 import com.aliyun.tea.NameInMap;
 import com.aliyun.tea.TeaModel;
 
-import java.lang.reflect.InvocationTargetException;
-
 public class Config extends TeaModel {
     @NameInMap("type")
     public String type = "default";

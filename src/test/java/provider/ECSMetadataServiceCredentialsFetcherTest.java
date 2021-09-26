@@ -12,7 +12,6 @@ import org.junit.Test;
 import org.mockito.ArgumentMatchers;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;

@@ -5,9 +5,6 @@ import com.aliyun.credentials.AlibabaCloudCredentials;
 import com.aliyun.credentials.exception.CredentialException;
 import com.aliyun.credentials.utils.AuthUtils;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;

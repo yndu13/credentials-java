@@ -11,11 +11,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentMatchers;
 
-import java.io.IOException;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
