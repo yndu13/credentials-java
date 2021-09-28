@@ -1,6 +1,5 @@
 package com.aliyun.credentials.provider;
 
-
 import com.aliyun.credentials.EcsRamRoleCredential;
 import com.aliyun.credentials.exception.CredentialException;
 import com.aliyun.credentials.http.CompatibleUrlConnClient;
@@ -22,7 +21,6 @@ public class ECSMetadataServiceCredentialsFetcher {
     private int connectionTimeout = 1000;
     private int readTimeout = 1000;
 
-
     public ECSMetadataServiceCredentialsFetcher(String roleName, int connectionTimeout, int readTimeout) {
         if (connectionTimeout > 1000) {
             this.connectionTimeout = connectionTimeout;
@@ -38,7 +36,6 @@ public class ECSMetadataServiceCredentialsFetcher {
         this.roleName = roleName;
         setCredentialUrl();
     }
-
 
     private void setCredentialUrl() {
         try {

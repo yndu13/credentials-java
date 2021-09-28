@@ -35,20 +35,18 @@ public class Client {
     }
 
     private AlibabaCloudCredentialsProvider getProvider(Config config) {
-        try {
-            switch (config.type) {
-                case AuthConstant.ECS_RAM_ROLE:
-                    return new EcsRamRoleCredentialProvider(config);
-                case AuthConstant.RAM_ROLE_ARN:
-                    return new RamRoleArnCredentialProvider(config);
-                case AuthConstant.RSA_KEY_PAIR:
-                    return new RsaKeyPairCredentialProvider(config);
-                default:
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        switch (config.type) {
+            case AuthConstant.ECS_RAM_ROLE:
+                return new EcsRamRoleCredentialProvider(config);
+            case AuthConstant.RAM_ROLE_ARN:
+                return new RamRoleArnCredentialProvider(config);
+            case AuthConstant.CREDENTIALS_URI:
+                return new CredentialsURICredentialProvider(config);
+            case AuthConstant.RSA_KEY_PAIR:
+                return new RsaKeyPairCredentialProvider(config);
+            default:
+                return new DefaultCredentialsProvider();
         }
-        return new DefaultCredentialsProvider();
     }
 
     public String getAccessKeyId() {
@@ -71,4 +69,3 @@ public class Client {
         return this.cloudCredential.getBearerToken();
     }
 }
-

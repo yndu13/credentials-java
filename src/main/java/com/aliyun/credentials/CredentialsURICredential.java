@@ -5,7 +5,7 @@ import com.aliyun.credentials.utils.AuthConstant;
 import com.aliyun.credentials.utils.ParameterHelper;
 import com.aliyun.credentials.utils.RefreshUtils;
 
-public class EcsRamRoleCredential implements AlibabaCloudCredentials {
+public class CredentialsURICredential implements AlibabaCloudCredentials {
 
     private long expiration;
     private String accessKeyId;
@@ -13,10 +13,10 @@ public class EcsRamRoleCredential implements AlibabaCloudCredentials {
     private String securityToken;
     private AlibabaCloudCredentialsProvider provider;
 
-    public EcsRamRoleCredential() {
+    public CredentialsURICredential() {
     }
 
-    public EcsRamRoleCredential(String accessKeyId, String accessKeySecret, String securityToken, String expiration,
+    public CredentialsURICredential(String accessKeyId, String accessKeySecret, String securityToken, String expiration,
                                 AlibabaCloudCredentialsProvider provider) {
         this.accessKeyId = accessKeyId;
         this.accessKeySecret = accessKeySecret;
@@ -27,7 +27,7 @@ public class EcsRamRoleCredential implements AlibabaCloudCredentials {
 
     public void refreshCredential() {
         if (RefreshUtils.withShouldRefresh(this.expiration)) {
-            EcsRamRoleCredential credential = (EcsRamRoleCredential) RefreshUtils.getNewCredential(this.provider);
+            CredentialsURICredential credential = (CredentialsURICredential) RefreshUtils.getNewCredential(this.provider);
             this.expiration = credential.getExpiration();
             this.accessKeyId = credential.getAccessKeyId();
             this.accessKeySecret = credential.getAccessKeySecret();
@@ -55,7 +55,7 @@ public class EcsRamRoleCredential implements AlibabaCloudCredentials {
 
     @Override
     public String getType() {
-        return AuthConstant.ECS_RAM_ROLE;
+        return AuthConstant.CREDENTIALS_URI;
     }
 
     @Override

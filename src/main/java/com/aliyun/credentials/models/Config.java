@@ -37,6 +37,8 @@ public class Config extends TeaModel {
     public String policy;
     @NameInMap("roleSessionExpiration")
     public Integer roleSessionExpiration = 3600;
+    @NameInMap("credentialsURI")
+    public String credentialsURI;
 
     public static Config build(java.util.Map<String, ?> map) {
         Config self = new Config();

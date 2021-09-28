@@ -27,6 +27,7 @@ public class AuthConstant {
     public static final String STS = "sts";
     public static final String ECS_RAM_ROLE = "ecs_ram_role";
     public static final String RAM_ROLE_ARN = "ram_role_arn";
+    public static final String CREDENTIALS_URI = "credentials_uri";
     public static final String RSA_KEY_PAIR = "rsa_key_pair";
     public static final String BEARER = "bearer";
 
